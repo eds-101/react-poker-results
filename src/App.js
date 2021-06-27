@@ -1,3 +1,4 @@
+import AddResults from './Components/Forms/AddResults'
 import './App.css';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
           Welcome to the Poker Results App
         </p>
       </header>
+      <body>
+          <AddResults />
+      </body>
     </div>
   );
 }
