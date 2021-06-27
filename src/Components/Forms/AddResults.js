@@ -1,6 +1,6 @@
-const AddResults = () => {
+const AddResults = (onSubmit) => {
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <label>
         Date:
         <input type="date" name="date" />
@@ -11,27 +11,27 @@ const AddResults = () => {
       </label>
       <label>
         Second Place:
-        <input type="text" name="second" />
+        <input type="text" name="secondPlace" />
       </label>
       <label>
         3rd:
-        <input type="text" name="third" />
+        <input type="text" name="thirdPlace" />
       </label>
       <label>
         4th:
-        <input type="text" name="fourth" />
+        <input type="text" name="fourthPlace" />
       </label>
       <label>
         5th:
-        <input type="text" name="fifth" />
+        <input type="text" name="fifthPlace" />
       </label>
       <label>
         6th:
-        <input type="text" name="sixth" />
+        <input type="text" name="sixthPlace" />
       </label>
       <label>
         7th:
-        <input type="text" name="seventh" />
+        <input type="text" name="seventhPlace" />
       </label>
       <input type="submit" value="Submit" />
     </form>

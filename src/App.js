@@ -31,7 +31,6 @@ function App() {
             <li>Last: {result.seventhPlace}</li>
           </React.Fragment>
         ))}  
-
           <AddResults />
       </body>
     </div>
