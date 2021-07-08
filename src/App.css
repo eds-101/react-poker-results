@@ -1,22 +1,4 @@
-.App {
-  text-align: center;
-  background-color: #c4cad6;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-
-}
-
-.App-header {
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.App-link {
-  color: #61dafb;
+.smallWidthInput {
+  width: auto;
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
 function App() {
   const [values, setValues] = useState({
@@ -23,28 +24,33 @@ function App() {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit}>
       <h1>Create a new Poker leaderboard</h1>
 
-      <label>Title:</label>
-      <input 
-        type="text" required value={values.title} onChange={set('title')} 
-      />
+      <Form.Group controlId="formTitle">
+        <Form.Label>Title</Form.Label>
+        <Form.Control 
+          type="text" required value={values.title} onChange={set('title')} 
+        />
+      </Form.Group>
 
-      <label>Description:</label>
-      <textarea placeholder={"Tell us about your poker league here!"} 
-        value={values.description} onChange={set('description')}
-      />
+      <Form.Group controlId="formDescription">
+        <Form.Label>Description</Form.Label>
+        <Form.Control as="textarea" placeholder={"Tell us about your poker league here!"}
+          value={values.description} onChange={set('description')} rows={2} />
+      </Form.Group>
 
-      <label>Number of initial players:</label>
-      <strong>You can edit, add and remove players later. Max 6 players (until live)</strong>
-      <input 
-        type="number" min="2" max="6" required
-        value={values.player_count} onChange={set('player_count')} 
-      />
+      <Form.Group controlId="formPlayerCount">
+        <Form.Label>Number of initial players</Form.Label>
+        <Form.Control className="smallWidthInput" type="number" min="2" max="20" required size="sm"
+          value={values.player_count} onChange={set('player_count')} />
+        <Form.Text className="text-muted">
+          You can edit, add and remove players later. Maximum 20.
+        </Form.Text>
+      </Form.Group>
 
       <button type="submit">Add Player details</button>
-  </form>
+  </Form>
   );
 }
 
