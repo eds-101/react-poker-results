@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
+import './App.css';
+
 function App() {
   const [values, setValues] = useState({
     title: '', description: '', player_count: ''
@@ -22,11 +24,11 @@ function App() {
       setValues(oldValues => ({...oldValues, [name]: value}))
     }
   }
-
+  
   return (
     <Form onSubmit={onSubmit}>
       <h1>Create a new Poker leaderboard</h1>
-
+      
       <Form.Group controlId="formTitle">
         <Form.Label>Title</Form.Label>
         <Form.Control 
@@ -49,8 +51,7 @@ function App() {
         </Form.Text>
       </Form.Group>
 
-      <button type="submit">Add Player details</button>
-  </Form>
+    </Form>
   );
 }
 
