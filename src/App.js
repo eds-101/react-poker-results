@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [values, setValues] = useState({
-    title: '', description: '', player_count: ''
+    title: '', description: '', playerCount: ''
   })
 
   const onSubmit = async (event) => {
@@ -46,7 +46,7 @@ function App() {
       <Form.Group controlId="formPlayerCount">
         <Form.Label>Number of initial players</Form.Label>
         <Form.Control className="smallWidthInput" type="number" min="2" max="20" required size="sm"
-          value={values.player_count} onChange={set('player_count')} />
+          value={values.player_count} onChange={set('playerCount')} />
         <Form.Text className="text-muted">
           You can edit, add and remove players later. Maximum 20.
         </Form.Text>
