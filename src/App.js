@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -50,6 +51,8 @@ function App() {
           You can edit, add and remove players later. Maximum 20.
         </Form.Text>
       </Form.Group>
+
+      <Button type="submit">Add Player details</Button>
 
     </Form>
   );
